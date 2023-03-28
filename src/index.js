@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from 'react-router-dom';
 // main component
 import App from './App';
 // default styles
@@ -9,7 +10,9 @@ import './default.scss';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App />
+		<Router>
+			<App />
+		</Router>
 	</React.StrictMode>
 );
 
