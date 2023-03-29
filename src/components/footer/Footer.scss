@@ -1,0 +1,25 @@
+@import '../../variables.scss';
+
+$footerColor: $primaryColor;
+$backgroundColor: white;
+
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 80px;
+	background-color: $backgroundColor;
+
+	&__copyright {
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		color: $footerColor;
+		font-weight: 300;
+		&__text {
+			margin-left: 5px;
+			font-weight: 200;
+		}
+	}
+}
