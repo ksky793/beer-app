@@ -22,13 +22,22 @@ ul li {
 .wrapper {
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 3rem;
+	// padding: 0 3rem;
 	max-width: 1200px;
 }
-
+.ic {
+	cursor: pointer;
+}
 // spinner settings
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
+}
+
+// padding
+.p {
+	&--70 {
+		padding: 70px 0;
+	}
 }
