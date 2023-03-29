@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+$defaultBtnColor: white;
+$paddingBtn: 12px;
+
+.btn {
+	background-color: $primaryColor;
+	color: $defaultBtnColor;
+	transition: 0.1s ease-in;
+	padding: $paddingBtn;
+	font-size: 1.6rem;
+	border: none;
+	cursor: pointer;
+	&:hover {
+		background-color: darken($color: $primaryColor, $amount: 20);
+	}
+}

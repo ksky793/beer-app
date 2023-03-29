@@ -6,6 +6,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 // default styles
 import './default.scss';
+import './components/ui/buttons/Buttons.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
