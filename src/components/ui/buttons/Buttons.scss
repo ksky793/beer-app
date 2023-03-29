@@ -13,4 +13,12 @@ $paddingBtn: 12px;
 	&:hover {
 		background-color: darken($color: $primaryColor, $amount: 20);
 	}
+
+	&--pagination-value {
+		cursor: default;
+		background-color: rgb(222, 208, 181);
+		&:hover {
+			background-color: rgb(222, 208, 181);
+		}
+	}
 }
