@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+$logoTextColor: #222222;
+$linksColor: #222222;
+$navbarBackground: white;
+
+.navbar {
+	height: 60px;
+	position: sticky;
+	border-bottom: 0.5px solid rgb(226, 226, 226);
+	background-color: $navbarBackground;
+	z-index: 11;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+	&__logo {
+		position: relative;
+		z-index: 11;
+		&__text {
+			font-size: 2.2rem;
+			font-weight: 600;
+			color: $logoTextColor;
+			span {
+				color: $primaryColor;
+			}
+		}
+	}
+	&__links {
+		height: 100vh;
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+
+		transform: translateY(-100vh);
+		background-color: $navbarBackground;
+		z-index: 10;
+		&--open {
+			transition: transform 0.6s ease-in-out;
+			transform: none;
+		}
+		&__link {
+			font-size: 4rem;
+			a {
+				color: $linksColor;
+				&:hover {
+					color: lighten($color: $linksColor, $amount: 60);
+				}
+			}
+		}
+		@include bp(desktop) {
+			position: unset;
+			height: 100%;
+			width: fit-content;
+			transform: unset;
+			flex-direction: row;
+			justify-content: unset;
+
+			&__link {
+				font-size: 2rem;
+				&:not(:last-child) {
+					margin-right: 30px;
+				}
+			}
+		}
+	}
+	&__icon {
+		position: relative;
+		z-index: 11;
+		display: flex;
+
+		@include bp(desktop) {
+			display: none;
+		}
+	}
+}

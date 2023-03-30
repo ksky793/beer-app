@@ -26,7 +26,12 @@ ul li {
 	max-width: 1200px;
 }
 .ic {
+	font-size: 2.6rem;
 	cursor: pointer;
+	&:focus {
+		outline: none;
+		box-shadow: none;
+	}
 }
 // spinner settings
 input::-webkit-outer-spin-button,
