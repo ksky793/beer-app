@@ -1,0 +1,56 @@
+@import '../../../mixins.scss';
+
+$cardShadow: 0 0 7px 3px rgb(205, 205, 205);
+$detailsValueColor: rgb(163, 162, 162);
+$margin: 20px;
+
+.card {
+	box-shadow: $cardShadow;
+}
+
+.beer-card {
+	width: 100%;
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 300px;
+		overflow: hidden;
+		img {
+			width: 60px;
+			-webkit-filter: drop-shadow(5px 5px 5px #222);
+			filter: drop-shadow(0px 0px 5px #222);
+		}
+	}
+
+	&__details {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		height: 150px;
+		background-color: #131513;
+		color: white;
+
+		&--more-info {
+			height: 100%;
+			text-align: justify;
+		}
+		&__type {
+			margin-bottom: $margin;
+			span {
+				font-weight: 100;
+				color: $detailsValueColor;
+				line-height: 24px;
+			}
+		}
+
+		&__tagline {
+			margin: $margin 0;
+			font-weight: 200;
+			font-size: 2.1rem;
+		}
+	}
+}
