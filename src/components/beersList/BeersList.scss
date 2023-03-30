@@ -1,0 +1,28 @@
+@import '../../mixins.scss';
+
+.beers {
+	margin-top: 20px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 40px;
+
+	@include bp(tablet) {
+		grid-template-columns: 1fr auto;
+	}
+	@include bp(desktop) {
+		grid-template-columns: 1fr 1fr auto;
+	}
+
+	&__beer {
+		@include bp(tablet) {
+			width: 300px;
+		}
+		@include bp(desktop) {
+			transition: 0.2s;
+			&:hover {
+				transform: scale(1.02);
+			}
+		}
+	}
+}
