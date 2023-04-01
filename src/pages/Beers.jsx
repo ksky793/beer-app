@@ -10,17 +10,21 @@ const Beers = () => {
 
 	const [results, setResults] = useState([]);
 	const [currentPage, setCurrentPage] = useState(1);
-	const [resultsPerPage, setResultsPerPage] = useState(12);
 	const [isError, setIsError] = useState(false);
+	const [totalPages, setTotalPages] = useState();
 
 	useEffect(() => {
 		const fetchBeers = async () => {
 			setLoading(true);
 			try {
-				const res = await axios.get(
-					`https://api.punkapi.com/v2/beers?page=${currentPage}&per_page=${resultsPerPage}`
-				);
+				const res = await axios.get(`https://api.punkapi.com/v2/beers`);
+				console.log(res.data);
+
 				setResults(res.data);
+
+				const totalPages = Math.ceil(res.data.length / 12);
+
+				setTotalPages(totalPages);
 				setLoading(false);
 			} catch (err) {
 				setLoading(false);
@@ -28,8 +32,12 @@ const Beers = () => {
 			}
 		};
 		fetchBeers();
-	}, [currentPage, resultsPerPage]);
-	
+	}, []);
+
+	const startIndex = (currentPage - 1) * 12;
+	const endIndex = startIndex + 12;
+	const currentResults = results.slice(startIndex, endIndex);
+
 	return (
 		<div className='beers-page wrapper p--70 '>
 			<h1 className='page__title beers-page__title'>Beers</h1>
@@ -38,11 +46,11 @@ const Beers = () => {
 
 			{!isError && (
 				<Spinner loading={loading}>
-					<BeersList results={results} />
+					<BeersList results={currentResults} />
 					<PaginationControls
 						currentPage={currentPage}
 						setCurrentPage={setCurrentPage}
-						resultsPerPage={resultsPerPage}
+						totalPages={totalPages}
 					/>
 				</Spinner>
 			)}

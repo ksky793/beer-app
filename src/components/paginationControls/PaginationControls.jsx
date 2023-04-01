@@ -3,11 +3,7 @@ import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 // styles
 import './PaginationControls.scss';
 
-const PaginationControls = ({
-	currentPage,
-	setCurrentPage,
-	resultsPerPage,
-}) => {
+const PaginationControls = ({ currentPage, setCurrentPage, totalPages }) => {
 	const handleClick = (page) => {
 		setCurrentPage(page);
 	};
@@ -26,7 +22,7 @@ const PaginationControls = ({
 			<div className='btn btn--pagination-value'>
 				<span>{currentPage}</span>
 			</div>
-			{currentPage < resultsPerPage && (
+			{currentPage < totalPages && (
 				<button
 					onClick={() => handleClick(currentPage + 1)}
 					className='btn pagination-control__button'
