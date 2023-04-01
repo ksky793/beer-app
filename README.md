@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Aplikacja Webowa wyświetlająca piwa z PunkApi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stack Technologiczny
+<div>
+	<img height="50" src="https://user-images.githubusercontent.com/25181517/192158956-48192682-23d5-4bfc-9dfb-6511ade346bc.png" alt="Sass" title="Sass" />
+	<img height="50" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React" />
+</div>
+SASS, React, metodyka BEM
 
-## Available Scripts
+## Wymagania funkcjonalne
 
-In the project directory, you can run:
+<ul>
+  <li>Kiedy ładuje się treść, użytkownik jest tego świadomy (wyświetla się spinner)</li>
+  <li>Aplikacja jest responsywna i działa na urządzeniach mobilnych</li>
+  <li>Podstrona z konkretnym piwem jest dostępna również poprzez URL `/beers/:beerId`
+</li>
+  <li>Na stronie wyświetlającej piwa są o nich informacje takie jak zdjęcie, nazwa piwa oraz tagline (są to dane z API)</li>
+  <li>Dedykowana podstrona z piwem zawiera informacje takie jak zdjęcie, nazwa piwa, tagline, description, abv, ibu, ingredients (są to dane z API)</li>
+</ul>
 
-### `npm start`
+## Zrzuty Ekranu
+### Strona Główna
+<img width="1510" alt="Zrzut ekranu 2023-04-1 o 16 50 01" src="https://user-images.githubusercontent.com/64898781/229296337-7a190a3d-9461-488d-9b15-b38e23a89d98.png">
+<img width="550" alt="Zrzut ekranu 2023-04-1 o 16 52 48" src="https://user-images.githubusercontent.com/64898781/229296535-ecec241c-c227-49d1-944c-beb881f17a98.png">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Beers - strona wyświetlająca piwa 
+<img width="550" alt="Zrzut ekranu 2023-04-1 o 16 54 22" src="https://user-images.githubusercontent.com/64898781/229296602-29f038f2-8d7b-42ea-adf4-10bff6dcab2f.png">
+<img width="1559" alt="Zrzut ekranu 2023-04-1 o 16 55 11" src="https://user-images.githubusercontent.com/64898781/229296622-b44feec8-ba0e-4ce2-9022-b43268187260.png">
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Strona piwa
+<img width="554" alt="Zrzut ekranu 2023-04-1 o 16 56 03" src="https://user-images.githubusercontent.com/64898781/229296659-4abfc1a3-9d67-4748-8dc3-7b79368c5ea6.png">
 
-### `npm run build`
+<img width="554" alt="Zrzut ekranu 2023-04-1 o 16 56 17" src="https://user-images.githubusercontent.com/64898781/229296671-14f1b221-36cd-44d0-b508-2aea413c356a.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
